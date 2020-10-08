@@ -1,0 +1,45 @@
+Highest Occurring Character
+Send Feedback
+Given a string, S, find and return the highest occurring character present in the given string.
+If there are 2 characters in the input string with same frequency, return the character which comes first.
+
+
+Note : Assume all the characters in the given string are lowercase.
+
+
+Input format :
+String S
+Output format :
+Highest occurring character
+Constraints :
+0 <= |S| <= 10^7
+where |S| represents the length of string, S.
+Sample Input 1:
+abdefgbabfba
+Sample Output 1:
+b
+Sample Input 2:
+xy
+Sample Output 2:
+x
+
+
+
+
+n=input()
+l=len(n)
+k=[0]*123
+i=0
+while i<l:
+    z=ord(n[i])
+    k[z]+=1
+    i=i+1
+max=0
+j=0
+while j<l:
+    z=ord(n[j])
+    if k[z]>max:
+        max=k[z]
+        i=z
+    j=j+1
+print(chr(i))
