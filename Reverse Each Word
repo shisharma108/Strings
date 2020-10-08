@@ -1,0 +1,77 @@
+Reverse Each Word
+Send Feedback
+Given a string S, reverse each word of a string individually. For eg. if a string is "abc def", reversed string should be "cba fed".
+Input Format :
+String S
+Output Format :
+Modified string
+Constraints :
+0 <= |S| <= 10^7
+where |S| represents the length of string, S.
+Sample Input 1:
+Welcome to Coding Ninjas
+Sample Output 1:
+emocleW ot gnidoC sajniN
+Sample Input 2:
+Give proper names to variables and functions
+Sample Output 2:
+eviG reporp seman ot selbairav dna snoitcnuf
+
+
+
+
+#def reverseword(s):
+      # w = s.split(" ")        # Splitting the Sentence into list of words.
+                           # reversing each word and creating a new list of words
+                           # apply List Comprehension Technique
+       #nw = [i[::-1] for i in w]
+                           # Join the new list of words to for a new Sentence
+       #ns = " ".join(nw)
+       #return ns
+    
+#s = input()
+#print(reverseword(s)
+      
+      
+      
+      
+def reverseword(s):
+      k=s.split(" ")
+      nw=[i[::-1] for i in k]
+      ns=" ".join(nw)
+      return ns
+s=input()
+print(reverseword(s))
+
+
+
+
+or
+
+
+
+
+def reverse(s):
+    ans = ''
+    for i in s:
+        ans = i + ans
+    return ans
+
+def reverseEachWord(s):
+	i = 0
+	n = len(s)
+	while i<n:
+		if s[i] == ' ':
+        
+			i += 1
+		else:
+			start = i
+			i += 1
+			while i<n and s[i]!= ' ':
+                
+				i += 1
+			s = s[:start] + reverse(s[start:i]) + s[i:]
+            
+	return s
+
+s=input()
