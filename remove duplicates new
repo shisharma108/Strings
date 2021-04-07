@@ -1,0 +1,27 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+from sys import stdin
+def removeConsecutiveDuplicate(s):
+    n=len(s)
+    if n==0:
+        return s
+    answer=""
+    i=0
+    while i<n:
+        uniqueChar=s[i]
+        j=i+1
+        while j<n and s[j]==uniqueChar:
+            j+=1
+            
+        answer+=uniqueChar
+        i=j
+    return answer
+s=input()
+ans=removeConsecutiveDuplicate(s)
+print(ans)
+        
+
+
+
+
+
