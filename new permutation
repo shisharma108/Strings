@@ -1,0 +1,17 @@
+def check_permutation(str):
+    count1 = 0
+    count2 = 0
+    for i in str1:
+        count1 = count1+ord(i)
+    for j in str2:
+        count2 = count2+ord(j)
+    if count1 == count2:
+        print("true")
+    else:
+        print("false")
+str1 = str(input())
+str2 = str(input())
+if len(str1) == len(str2):
+    check_permutation(str)
+else:
+    print("false")
